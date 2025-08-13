@@ -1,62 +1,52 @@
-# 8-Puzzle Solver using DFS (C++)
+# BFS 8-Puzzle Solver
 
-This project solves the classic 8-puzzle problem using **Depth-First Search (DFS)**, implemented in C++ with STL. It allows you to input an initial puzzle state and finds a solution path to the goal configuration.
+This program solves the classic **8-Puzzle Problem** using **Breadth-First Search (BFS)**.
 
 ---
 
-## Problem Statement
-Given a 3x3 matrix puzzle with 8 tiles numbered **1–8** and a blank space represented by **0**, the task is to move the blank space around to reach the goal state:
+## 📜 Problem Description
+The **8-Puzzle Problem** consists of a 3x3 grid with 8 numbered tiles and one blank space (`0`).  
+The goal is to move the tiles into the correct order:
 
 1 2 3
 4 5 6
 7 8 0
 
-
-You can move the blank space **up, down, left, or right**, one tile at a time.
-
----
-
-## Algorithm Used
-This implementation uses the **Depth-First Search (DFS)** algorithm. It explores possible puzzle states by moving the blank tile in each valid direction recursively (via a stack), avoiding already visited configurations.
-
-**DFS Characteristics:**
-- Uses a **stack (LIFO)**  
-- Explores deep paths before backtracking  
-- May not always find the shortest solution, but guarantees finding one if it exists  
+You can move the blank (`0`) **up, down, left, or right**.
 
 ---
 
-## Implementation Details
-- **`is_soln()`** → Checks if current state matches the goal state  
-- **`findblank()`** → Locates the blank (0) tile  
-- **`genmoves()`** → Generates all valid tile moves (up, down, left, right)  
-- **`dfsStack()`** → Handles DFS using an STL stack and avoids revisiting states using a set  
+## 🚀 How It Works
+This implementation uses **Breadth-First Search (BFS)** to explore all possible configurations of the puzzle until it reaches the goal.
+
+1. **`is_soln`** → Checks if the current state is the goal state.
+2. **`findblank`** → Finds the position of the blank (`0`) in the puzzle.
+3. **`genmoves`** → Generates all possible moves by swapping the blank with its neighbors.
+4. **`bfsQueue`** → Performs BFS using a queue:
+   - Keeps track of visited states using a set.
+   - Stores the path from the initial state to the solution.
+   - Prints the solution sequence when found.
 
 ---
 
-## Sample Input Format
-You’ll be prompted to enter the puzzle matrix row-wise:
+## 🖥️ Example Run
 
-Example input:
-1 2 3 4 0 6 7 5 8
-
-This corresponds to:
+**Input:**
+Enter the puzzle values (0 for blank), row-wise:
 1 2 3
-4 0 6
-7 5 8
+4 5 6
+0 7 8
 
----
-
-## Example Output
+**Output:**
 Problem Matrix:
 1 2 3
-4 0 6
-7 5 8
+4 5 6
+0 7 8
 
 --- Solution Found ---
 1 2 3
-4 0 6
-7 5 8
+4 5 6
+0 7 8
 1 2 3
 4 5 6
 7 0 8
@@ -66,17 +56,21 @@ Problem Matrix:
 
 ---
 
-## Use Cases
-- Understanding basic search algorithms in AI  
-- Building blocks for intelligent puzzle solvers  
-- Educational demos for DFS in graph problems  
-- Useful for courses in **Artificial Intelligence** or **Game Theory**  
+## BFS Logic
+- Start with the initial puzzle configuration.
+- Use a queue to store `(current_state, path_to_state)`.
+- For each state:
+  - If it's the goal, print the path.
+  - Otherwise, generate valid moves and add them to the queue if not visited.
 
 ---
 
-## To Compile and Run
+## How to Compile and Run
+
+### **Compile**
 ```bash
-g++ dfs8puzzle.cpp -o dfs8puzzle
-./dfs8puzzle
+g++ bfs_8puzzle.cpp -o bfs_8puzzle
+Run
+./bfs_8puzzle
 
 
