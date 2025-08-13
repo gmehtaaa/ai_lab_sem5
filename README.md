@@ -1,1 +1,1 @@
-# tic-tac-toe-problem-magic-square-approach
+# Tic-tac-toe-problem-magic-square-approach
