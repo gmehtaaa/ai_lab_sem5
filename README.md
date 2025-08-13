@@ -32,9 +32,10 @@ Magic squares have several interesting applications:
 ## Example Run
 Enter an odd number for MagicSquare: 3
 Magic square of size 3:
-8 1 6
-3 5 7
-4 9 2
+8     1     6
+3     5     7
+4     9     2
+
 
 ## Notes
 - Only odd `n` is supported.
