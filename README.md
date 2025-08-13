@@ -16,12 +16,14 @@ Tic Tac Toe is played on a **3×3 grid**:
 - Player **X** (human) and Player **O** (computer) take turns.
 - The goal is to be the first to align **three of your symbols** in a row, column, or diagonal.
 
-The **Magic Square method** assigns each cell a number so that any winning line sums to **15**:
-1 | 2 | 3 8 | 3 | 4
----+---+--- => ---+---+---
-4 | 5 | 6 1 | 5 | 9
----+---+--- ---+---+---
-7 | 8 | 9 6 | 7 | 2
+**Magic Square method** assigns each cell a number so that any winning line sums to **15**.
+
+Magic Square:       Board Positions:
+ 4 | 9 | 2           1 | 2 | 3
+---+---+---         ---+---+---
+ 3 | 5 | 7           4 | 5 | 6
+---+---+---         ---+---+---
+ 8 | 1 | 6           7 | 8 | 9
 
 ---
 
