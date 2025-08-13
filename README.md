@@ -4,7 +4,7 @@ This program solves the classic **8-Puzzle Problem** using **Breadth-First Searc
 
 ---
 
-## 📜 Problem Description
+## Problem Description
 The **8-Puzzle Problem** consists of a 3x3 grid with 8 numbered tiles and one blank space (`0`).  
 The goal is to move the tiles into the correct order:
 
@@ -16,7 +16,7 @@ You can move the blank (`0`) **up, down, left, or right**.
 
 ---
 
-## 🚀 How It Works
+## How It Works
 This implementation uses **Breadth-First Search (BFS)** to explore all possible configurations of the puzzle until it reaches the goal.
 
 1. **`is_soln`** → Checks if the current state is the goal state.
@@ -29,7 +29,7 @@ This implementation uses **Breadth-First Search (BFS)** to explore all possible 
 
 ---
 
-## 🖥️ Example Run
+## Example Run
 
 **Input:**
 Enter the puzzle values (0 for blank), row-wise:
