@@ -36,7 +36,6 @@ Magic square of size 3:
 3 5 7
 4 9 2
 
-
 ## Notes
 - Only odd `n` is supported.
 - The magic constant (sum of each row, column, diagonal) is given by:
