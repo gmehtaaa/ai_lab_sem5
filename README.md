@@ -18,12 +18,13 @@ Tic Tac Toe is played on a **3×3 grid**:
 
 **Magic Square method** assigns each cell a number so that any winning line sums to **15**.
 
-Magic Square + Positions:
- 4(1) | 9(2) | 2(3)
-------+-------+------
- 3(4) | 5(5) | 7(6)
-------+-------+------
- 8(7) | 1(8) | 6(9)
+Magic Square + Positions
+
+| 4(1) | 9(2) | 2(3) |
+|------|------|------|
+| 3(4) | 5(5) | 7(6) |
+| 8(7) | 1(8) | 6(9) |
+
 
 ---
 
