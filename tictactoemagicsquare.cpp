@@ -3,7 +3,6 @@
 #include <map>
 using namespace std;
 
-// Magic square mapping (position -> magic value)
 map<int, int> magicSquare = {
     {1, 8}, {2, 3}, {3, 4},
     {4, 1}, {5, 5}, {6, 9},
@@ -11,9 +10,8 @@ map<int, int> magicSquare = {
 };
 
 vector<char> board(9, ' ');
-vector<int> movesX, movesO; // store magic square values for each player
+vector<int> movesX, movesO; 
 
-// Print board
 void printBoard() {
     cout << "\n";
     for (int i = 0; i < 9; i += 3) {
@@ -23,7 +21,6 @@ void printBoard() {
     cout << "\n";
 }
 
-// Check if player has already won
 bool checkWin(const vector<int>& moves) {
     if (moves.size() < 3) return false;
     for (int i = 0; i < moves.size(); i++) {
@@ -37,7 +34,6 @@ bool checkWin(const vector<int>& moves) {
     return false;
 }
 
-// Check if player can win this turn and return the position to play
 bool canWinNow(const vector<int>& moves, int &winningPos) {
     if (moves.size() < 2) return false;
     for (int i = 0; i < moves.size(); i++) {
@@ -55,14 +51,10 @@ bool canWinNow(const vector<int>& moves, int &winningPos) {
     return false;
 }
 
-// Computer move using Program 2′ approach
 int computerMove() {
     int pos;
-    // Try to win
     if (canWinNow(movesO, pos)) return pos;
-    // Block human
     if (canWinNow(movesX, pos)) return pos;
-    // Take first free
     for (int i = 1; i <= 9; i++) {
         if (board[i-1] == ' ') return i;
     }
@@ -90,14 +82,12 @@ int main() {
             cout << "Computer chooses: " << pos << "\n";
         }
 
-        // Mark board and record magic square value
         board[pos-1] = currentPlayer;
         if (currentPlayer == 'X')
             movesX.push_back(magicSquare[pos]);
         else
             movesO.push_back(magicSquare[pos]);
 
-        // Check win
         if ((currentPlayer == 'X' && checkWin(movesX)) ||
             (currentPlayer == 'O' && checkWin(movesO))) {
             printBoard();
@@ -105,7 +95,6 @@ int main() {
             return 0;
         }
 
-        // Switch player
         currentPlayer = (currentPlayer == 'X') ? 'O' : 'X';
     }
 
