@@ -14,6 +14,7 @@ This project implements a **Tic-Tac-Toe** game with the following rules:
 **Time & Space Complexity**
 
 **Time Complexity**
+
 At most 9! game states.
 
 Minimax explores all possibilities: O(b^d) where:
@@ -25,6 +26,7 @@ d = depth of game tree (≤ 9)
 Worst case: O(9!) ≈ 362,880 states (manageable).
 
 **Space Complexity**
+
 O(d) = O(9) due to recursion depth.
 
 Board state stored globally.
@@ -32,6 +34,7 @@ Board state stored globally.
 ---
 
 **Use Cases**
+
 Classic demonstration of Minimax algorithm.
 
 Educational tool for game theory & decision-making.
@@ -41,6 +44,7 @@ Useful in teaching recursion, backtracking, and adversarial search.
 ---
 
 **Learning Outcomes**
+
 Understand how heuristic functions guide search.
 
 Learn hill climbing approach and its drawbacks.
