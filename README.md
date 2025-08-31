@@ -29,12 +29,16 @@ O(d) = O(9) due to recursion depth.
 
 Board state stored globally.
 
+---
+
 **Use Cases**
 Classic demonstration of Minimax algorithm.
 
 Educational tool for game theory & decision-making.
 
 Useful in teaching recursion, backtracking, and adversarial search.
+
+---
 
 **Learning Outcomes**
 Understand how heuristic functions guide search.
