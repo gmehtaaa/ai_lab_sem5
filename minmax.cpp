@@ -31,13 +31,13 @@ int main() {
 
         if (checkWin(board, 'X')) {
             printBoard(board);
-            cout << "You win! 🎉" << endl;
+            cout << "You win! " << endl;
             break;
         }
 
         if (isBoardFull(board)) {
             printBoard(board);
-            cout << "It's a tie! 🤝" << endl;
+            cout << "It's a tie! " << endl;
             break;
         }
 
@@ -46,13 +46,13 @@ int main() {
 
         if (checkWin(board, 'O')) {
             printBoard(board);
-            cout << "Computer wins! 🤖" << endl;
+            cout << "Computer wins! " << endl;
             break;
         }
 
         if (isBoardFull(board)) {
             printBoard(board);
-            cout << "It's a tie! 🤝" << endl;
+            cout << "It's a tie! " << endl;
             break;
         }
     }
