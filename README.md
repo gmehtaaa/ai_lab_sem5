@@ -1,4 +1,4 @@
-# Prolog Blocksworld 
+# Prolog Blocks World 
 
 This project implements the classic **Blocks World problem** using Prolog, demonstrating a fundamental application of logic programming in automated planning and Artificial Intelligence (AI).
 
