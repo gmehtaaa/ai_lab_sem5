@@ -1,8 +1,6 @@
 member_eq(X,[X|_]) :- !.
 member_eq(X,[_|T]) :- member_eq(X,T).
 
-% action(Name, Preconditions, DeleteEffects, AddEffects)
-
 action(pickup(X), [clear(X), ontable(X), holding(none)], 
        [ontable(X), clear(X), holding(none)], [holding(X)]).
 
